@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 Biblioteca</h1>
+        <p>Gestión de libros</p>
+    </header>
+
+    <main>
+
+        <!-- AGREGAR LIBRO -->
+
+        <section class="formulario">
+
+            <h2>Agregar libro</h2>
+
+            <input
+                type="text"
+                id="titulo"
+                placeholder="Título"
+            >
+
+            <input
+                type="text"
+                id="autor"
+                placeholder="Autor"
+            >
+
+            <input
+                type="number"
+                id="anio"
+                placeholder="Año"
+            >
+
+            <input
+                type="text"
+                id="genero"
+                placeholder="Género"
+            >
+
+            <button onclick="agregarLibro()">
+                Agregar libro
+            </button>
+
+        </section>
+
+
+        <!-- EDITAR LIBRO -->
+
+        <section
+            class="formulario"
+            id="formulario-editar"
+            style="display: none;"
+        >
+
+            <h2>Editar libro</h2>
+
+            <input
+                type="hidden"
+                id="editar-id"
+            >
+
+            <input
+                type="text"
+                id="editar-titulo"
+                placeholder="Título"
+            >
+
+            <input
+                type="text"
+                id="editar-autor"
+                placeholder="Autor"
+            >
+
+            <input
+                type="number"
+                id="editar-anio"
+                placeholder="Año"
+            >
+
+            <input
+                type="text"
+                id="editar-genero"
+                placeholder="Género"
+            >
+
+            <button onclick="guardarEdicion()">
+                Guardar cambios
+            </button>
+
+            <button onclick="cancelarEdicion()">
+                Cancelar
+            </button>
+
+        </section>
+
+
+        <!-- LIBROS -->
+
+        <section>
+
+            <h2>Libros</h2>
+
+
+            <!-- BUSCADOR -->
+
+            <div class="buscador">
+
+                <input
+                    type="text"
+                    id="busqueda"
+                    placeholder="🔎 Buscar libro..."
+                >
+                <br><br>
+                <button onclick="buscarLibros()">
+                    Buscar
+                </button>
+
+                <button onclick="listarLibros()">
+                    Mostrar todos
+                </button>
+
+            </div>
+            <br>
+
+            <!-- LISTA -->
+
+            <div id="lista-libros"></div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
